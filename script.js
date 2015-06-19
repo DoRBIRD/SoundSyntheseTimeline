@@ -4,10 +4,14 @@ width = innerWidth/2-10,
 height = innerHeight-37,
 canvas = document.getElementById("index"),
 image = new Image();
+<<<<<<< HEAD
 image.src = "logo.png"
 
 
 mobileUrl = "?useformat=mobile";
+=======
+image.src = "logo.png";
+>>>>>>> origin/neuerBranch
 
 BtnZoomIn = new Image();
 BtnZoomIn.src = "BtnZoomIn.jpg";
@@ -37,7 +41,11 @@ canvas.height = height;
 canvas.setAttribute('tabindex', 1);
 
 webpage = document.getElementById("webpage");
+<<<<<<< HEAD
 var webpagewidth =innerWidth/2-50;
+=======
+var webpagewidth =innerWidth/2-25;
+>>>>>>> origin/neuerBranch
 webpage.width =  webpagewidth;
 webpage.height = innerHeight-37;
 webpage.margin = "0px";
@@ -64,7 +72,10 @@ colorcounter=0;
 
 
 function verkleinern(){
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/neuerBranch
 		$( this).animate({
 			width : innerWidth/3-10,
 			webpagewidth: innerWidth*2/3-25
@@ -79,9 +90,12 @@ function verkleinern(){
 }
 
 function vergroessern(){
+<<<<<<< HEAD
 
 		mobileUrl = "";
 
+=======
+>>>>>>> origin/neuerBranch
 		$( this).animate({
 			webpagewidth: innerWidth/2-25,
 			width : innerWidth/2-10
@@ -166,9 +180,15 @@ function zeitstrahlZeichnen(faktor){
 
 	//6. zeichnet die ausgewaehlten kategorien
 	kategorieListeZeichnen();
+<<<<<<< HEAD
 	/*
 	ctx.drawImage(ausblendungo,0,0,width,ausblendungo.height);
 	ctx.drawImage(ausblendung,0,height-100,width,ausblendung.height);*/
+=======
+	
+	//ctx.drawImage(ausblendungo,0,0,width,ausblendungo.height);
+	//ctx.drawImage(ausblendung,0,height-100,width,ausblendung.height);
+>>>>>>> origin/neuerBranch
 	//7. zeichnet scrollbalken
 	//ctx.fillStyle = '#FFFFFF';
 	//ctx.fillRect(10,heightY*zoomfaktor,10,200);
@@ -329,9 +349,15 @@ function kategorieAendern(i){
 	return kategorieListe[i];
 }
 
+<<<<<<< HEAD
 function eventErstellen(start,ende,text,langtext,kategorie, webpage){
 	//erstellt ein event mit einem startjahr, einem endjahr, einer beschreibung und einer Farbe.
 	webpage = "http://insw2.fk4.hs-bremen.de:1680/de/index.php/"+text+"?useformat=mobile";
+=======
+function eventErstellen(start,ende,text,langtext,kategorie,webpage){
+	//erstellt ein event mit einem startjahr, einem endjahr, einer beschreibung und einer Farbe.
+	
+>>>>>>> origin/neuerBranch
 	dauer = ende-start;
 	ebene = 0;
 	if(start!=ende) ebene=1;
@@ -349,7 +375,11 @@ function eventErstellen(start,ende,text,langtext,kategorie, webpage){
 					}
 			}
 		}else{
+<<<<<<< HEAD
 			ebene = -4;
+=======
+			ebene = -1;
+>>>>>>> origin/neuerBranch
 		}
 	}
 
@@ -388,6 +418,11 @@ function schneidenSich(start1,ende1,start2,ende2){
 	return false;
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/neuerBranch
 function liegtDazwischen(punkt,start,ende){
 	//unterfunktion von schneidenSich
 	if(start <= punkt && punkt <= ende){
@@ -425,6 +460,7 @@ function eventsZeichnen(){
 				posText = posX+30
 				posTextY = 0;
 			}*/
+<<<<<<< HEAD
 			drawShadow(posX,start,10,size);
 			ctx.fillStyle = e.color;
 			ctx.fillRect(posX-1,start,12,2)        //   --   Start-segment
@@ -435,6 +471,35 @@ function eventsZeichnen(){
 			start = start+size/2;
 			//start = getDrawnY(e.start-e.end);
 			
+=======
+			if(e.start == e.end){
+					var markersize=10;
+					ctx.fillStyle = e.color;
+				 	ctx.beginPath();
+					ctx.arc(posX, start, markersize, 0, Math.PI*2, true);
+					ctx.closePath();
+					ctx.fill(); 
+					
+					ctx.beginPath();
+					ctx.moveTo(posX,start+markersize);
+					ctx.lineTo(posX+markersize*3,start);
+					ctx.lineTo(posX,start-markersize);
+					ctx.fill();
+					
+			}else{
+			
+			
+				drawShadow(posX,start,10,size);
+				ctx.fillStyle = e.color;
+				ctx.fillRect(posX-1,start,12,2)        //   --   Start-segment
+				ctx.fillRect(posX,start,10,size);      //   ||   Middle-segment
+				ctx.fillRect(posX-1,start+size-2,12,2) //   --   End-segment
+			}
+			
+			start = start+size/2;
+			
+	
+>>>>>>> origin/neuerBranch
 			if(e.start!=e.end){
 				standardText(e.start + "-" + e.end,20,start);
 			}else{
@@ -701,6 +766,7 @@ function pruefeEvent(x,mouseY,y2,click){
 function main(){
 	//hier werden alle events erstellt.
 	
+<<<<<<< HEAD
 	//Hersteller
 	eventErstellen(1935,endjahr,"Yamaha","",'Hersteller', 0);
 	eventErstellen(1853 ,1955,"Wurlitzer Electric Piano","Bis zur Herausgabe.",'Hersteller', 0);
@@ -746,6 +812,24 @@ eventErstellen(1997,1997,"Yamaha AN1x","",'Meilenstein',0);
 eventErstellen(1997,1997,"Roland JP-8000","",'Meilenstein',0);
 eventErstellen(1998,1998,"Novation Super Nova","",'Meilenstein',0);
 eventErstellen(2001,2001,"Hartmann Music Neuron","",'Meilenstein',0);
+=======
+	eventErstellen(1935,endjahr,"Yamaha","Yamaha ist ein Hersteller von Klavieren, Flügeln und Motorrädern",'Yamaha',"http://87.106.49.122/de/index.php/Yamaha");
+	eventErstellen(1853 ,1955,"Wurlitzer Electric Piano","Bis zur Herausgabe.",'Wurlitzer',"http://87.106.49.122/de/index.php/Wurlitzer");
+	eventErstellen(1914 ,1940,"Kinoorgel","Existenz, danach wurde sie nicht mehr verwendet",'Andere',"http://87.106.49.122/de/index.php/Trautonium");
+	eventErstellen(1900,1910,"Testevent","Test nr 1", "Andere","http://www.colorhexa.com/7a7a7a");
+	eventErstellen(1800,1800,"Spontanes Event","Beschreibung", "Andere","http://www.colorhexa.com");
+	eventErstellen(1850,1850,"Spontanes Event","Beschreibung", "ABC","http://www.colorhexa.com");
+	eventErstellen(1800,1900,"2","Beschreibung", "Wieso","http://www.colorhexa.com");
+	/*eventErstellen(1955,endjahr,"Wurlitzer Piano, elektromechanisch","Das Wurlitzer Piano ist ein(...)",'Wurlitzer');
+	eventErstellen(1959,endjahr,"(Fender) Rhodes, elektromechanisch","Fender, die Firma eines deutschen(...)",'Fender');
+	eventErstellen(1962,endjahr,"Vox Orgel, elektronisch","Die Vox Orgel ist eine Orgel, die (...)",'Theremin');
+	//eventErstellen(1902,1927,"Test text for testing timelines 'n stuff. Also nothing of importance (...)");
+	eventErstellen(1962,endjahr,"Chamberlin/Mellotron, Bandschleifen", "Das Chamberlin ist ein durch Bandschleifen(...)",'Chamberlin');
+	eventErstellen(1964,endjahr,"Moog Modularsystem, elektronisch","Das ''Moog Modularsystem'' von Robert Moog ist (...)");
+	eventErstellen(1903,1920,"Tesname","Das ''asdasdshabd");
+	eventErstellen(1903,1920,"Andere","Blablablablabl","Theremin");
+	//eventErstellen(1990,1990,"Einzelevent 1",'#FFFFFF');*/
+>>>>>>> origin/neuerBranch
 
 	zeitstrahlZeichnen(zoomfaktor);
 }
