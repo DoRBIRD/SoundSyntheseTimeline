@@ -322,9 +322,9 @@ function kategorieAendern(i){
 	return kategorieListe[i];
 }
 
-function eventErstellen(start,ende,text,langtext,kategorie,webpage){
+function eventErstellen(start,ende,text,langtext,kategorie, webpage){
 	//erstellt ein event mit einem startjahr, einem endjahr, einer beschreibung und einer Farbe.
-	
+	webpage = "http://insw2.fk4.hs-bremen.de:1680/de/index.php/"+text+"?useformat=mobile";
 	dauer = ende-start;
 	ebene = 0;
 	if(start!=ende) ebene=1;
@@ -713,22 +713,47 @@ function pruefeEvent(x,mouseY,y2,click){
 function main(){
 	//hier werden alle events erstellt.
 	
-	eventErstellen(1935,endjahr,"Yamaha","Yamaha ist ein Hersteller von Klavieren, Flügeln und Motorrädern",'Yamaha',"http://87.106.49.122/de/index.php/Yamaha");
-	eventErstellen(1853 ,1955,"Wurlitzer Electric Piano","Bis zur Herausgabe.",'Wurlitzer',"http://87.106.49.122/de/index.php/Wurlitzer");
-	eventErstellen(1914 ,1940,"Kinoorgel","Existenz, danach wurde sie nicht mehr verwendet",'Andere',"http://87.106.49.122/de/index.php/Trautonium");
-	eventErstellen(1900,1910,"Testevent","Test nr 1", "Andere","http://www.colorhexa.com/7a7a7a");
-	eventErstellen(1800,1800,"Spontanes Event","Beschreibung", "Andere","http://www.colorhexa.com");
-	eventErstellen(1850,1850,"Spontanes Event","Beschreibung", "ABC","http://www.colorhexa.com");
-	eventErstellen(1800,1900,"2","Beschreibung", "Wieso","http://www.colorhexa.com");
-	/*eventErstellen(1955,endjahr,"Wurlitzer Piano, elektromechanisch","Das Wurlitzer Piano ist ein(...)",'Wurlitzer');
-	eventErstellen(1959,endjahr,"(Fender) Rhodes, elektromechanisch","Fender, die Firma eines deutschen(...)",'Fender');
-	eventErstellen(1962,endjahr,"Vox Orgel, elektronisch","Die Vox Orgel ist eine Orgel, die (...)",'Theremin');
-	//eventErstellen(1902,1927,"Test text for testing timelines 'n stuff. Also nothing of importance (...)");
-	eventErstellen(1962,endjahr,"Chamberlin/Mellotron, Bandschleifen", "Das Chamberlin ist ein durch Bandschleifen(...)",'Chamberlin');
-	eventErstellen(1964,endjahr,"Moog Modularsystem, elektronisch","Das ''Moog Modularsystem'' von Robert Moog ist (...)");
-	eventErstellen(1903,1920,"Tesname","Das ''asdasdshabd");
-	eventErstellen(1903,1920,"Andere","Blablablablabl","Theremin");
-	//eventErstellen(1990,1990,"Einzelevent 1",'#FFFFFF');*/
+	//Hersteller
+	eventErstellen(1935,endjahr,"Yamaha","",'Hersteller', 0);
+	eventErstellen(1853 ,1955,"Wurlitzer Electric Piano","Bis zur Herausgabe.",'Hersteller', 0);
+	
+	//Milestones
+	eventErstellen(1962,1962,"Chamberlin/Mellotron","",'Meilenstein',0);
+	eventErstellen(1964,1964,"Robert Moog Modularsystem","",'Meilenstein',0);
+	eventErstellen(1968,1968,"Hohner Clavinet D6","",'Meilenstein',0);
+	eventErstellen(1971,1971,"Moog, Minimoog","",'Meilenstein',0);
+	eventErstellen(1972,1972,"Arp Odyssey","",'Meilenstein',0);
+	eventErstellen(1973,1973,"Roland SH-1000","",'Meilenstein',0);
+	eventErstellen(1973,1973,"Oberheim","",'Meilenstein',0);
+	eventErstellen(1975,1975,"Moog, Polymoog","",'Meilenstein',0);
+	eventErstellen(1976,1976,"New England Digital","",'Meilenstein',0);
+	eventErstellen(1977,1977,"Yamaha CS-80","",'Meilenstein',0);
+	eventErstellen(1978,1978,"Sequential Cirquits Prophet 5","",'Meilenstein',0);
+	eventErstellen(1978,1978,"Korg MS10/MS20","",'Meilenstein',0);
+	eventErstellen(1979,1979,"CMI Fairlight","",'Meilenstein',0);
+	eventErstellen(1980,1980,"PPG Wavecomputer 360","",'Meilenstein',0);
+	eventErstellen(1980,1980,"Oberheim OBXa","",'Meilenstein',0);
+	eventErstellen(1980,1980,"Korg Polysix","",'Meilenstein',0);
+	eventErstellen(1981,1981,"Roland Jupiter 8","",'Meilenstein',0);
+	eventErstellen(1981,1981,"Yamaha GS1","",'Meilenstein',0);
+	eventErstellen(1983,1983,"Yamaha CP-70 Electric Grand","",'Meilenstein',0);
+	eventErstellen(1983,1983,"Yamaha DX7","",'Meilenstein',0);
+	eventErstellen(1984,1984,"Casio CZ-101 (Phase Distortion Synthese)","",'Meilenstein',0);
+	eventErstellen(1984,1984,"Akai S612 Sampler","",'Meilenstein',0);
+	eventErstellen(1985,1985,"Akai S900 Sampler","",'Meilenstein',0);
+	eventErstellen(1986,1986,"Sequential Cirquits Prophet VS","",'Meilenstein',0);
+	eventErstellen(1987,1987,"Roland D-50","",'Meilenstein',0);
+	eventErstellen(1988,1988,"Korg M1","",'Meilenstein',0);
+	eventErstellen(1990,1990,"Korg Wavestation","",'Meilenstein',0);
+	eventErstellen(1991,1991,"Roland Sound Canvas SC-55","",'Meilenstein',0);
+	eventErstellen(1992,1992,"Novation","",'Meilenstein',0);
+	eventErstellen(1994,1994,"Yamaha VL1","",'Meilenstein',0);
+	eventErstellen(1995,1995,"Clavia Nordlead","",'Meilenstein',0);
+	eventErstellen(1996,1996,"Kawai K5000","",'Meilenstein',0);
+	eventErstellen(1997,1997,"Yamaha AN1x","",'Meilenstein',0);
+	eventErstellen(1997,1997,"Roland JP-8000","",'Meilenstein',0);
+	eventErstellen(1998,1998,"Novation Super Nova","",'Meilenstein',0);
+	eventErstellen(2001,2001,"Hartmann Music Neuron","",'Meilenstein',0);
 
 	zeitstrahlZeichnen(zoomfaktor);
 }
