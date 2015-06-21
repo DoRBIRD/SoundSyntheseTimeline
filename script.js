@@ -326,7 +326,7 @@ function eventErstellen(start,ende,text,langtext,kategorie, webpage){
 	//erstellt ein event mit einem startjahr, einem endjahr, einer beschreibung und einer Farbe.
 	webpage = "http://insw2.fk4.hs-bremen.de:1680/de/index.php/"+text+"?useformat=mobile";
 	dauer = ende-start;
-	ebene = 0;
+	ebene = 1;
 	if(start!=ende) ebene=1;
 	for(i= 0; i < eventListe.length; i++){
 		e = eventListe[i];
@@ -342,7 +342,7 @@ function eventErstellen(start,ende,text,langtext,kategorie, webpage){
 					}
 			}
 		}else{
-			ebene = 0;
+			ebene = -1;
 		}
 	}
 
@@ -728,11 +728,7 @@ function main(){
 	
 	
 	//Milestones
-	eventErstellen(1964,1965,"Robert Moog Modularsystem","",'Meilenstein',0);
-	eventErstellen(1964,1964,"Robert Moog Modularsystem","",'Meilenstein',0);
-	eventErstellen(1964,1964,"Robert Moog Modularsystem","",'Meilenstein',0);
-	eventErstellen(1964,1964,"Robert Moog Modularsystem","",'Meilenstein',0);
-/* 	eventErstellen(1962,1962,"Chamberlin/Mellotron","",'Meilenstein',0);
+ 	eventErstellen(1962,1962,"Chamberlin/Mellotron","",'Meilenstein',0);
 	eventErstellen(1964,1964,"Robert Moog Modularsystem","",'Meilenstein',0);
 	eventErstellen(1968,1968,"Hohner Clavinet D6","",'Meilenstein',0);
 	eventErstellen(1971,1971,"Moog, Minimoog","",'Meilenstein',0);
@@ -767,7 +763,7 @@ function main(){
 	eventErstellen(1997,1997,"Yamaha AN1x","",'Meilenstein',0);
 	eventErstellen(1997,1997,"Roland JP-8000","",'Meilenstein',0);
 	eventErstellen(1998,1998,"Novation Super Nova","",'Meilenstein',0);
-	eventErstellen(2001,2001,"Hartmann Music Neuron","",'Meilenstein',0); */
+	eventErstellen(2001,2001,"Hartmann Music Neuron","",'Meilenstein',0); 
 
 	zeitstrahlZeichnen(zoomfaktor);
 }
